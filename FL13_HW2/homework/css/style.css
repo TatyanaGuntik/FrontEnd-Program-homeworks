@@ -1,0 +1,216 @@
+
+
+@media screen {
+
+    .tm-nav-item:hover {
+        background-color: lightskyblue;
+    }
+
+    .tm-nav-item:hover a {
+        color: white;
+    }
+
+    .tm-banner {
+        background: linear-gradient(to bottom, burlywood, lightskyblue);
+    }
+
+    .tm-banner-inner {
+        background-color: white;
+    }
+
+    .tm-banner-text {
+        letter-spacing: 5px;
+        word-spacing: 7px;
+        text-shadow: 0px 3px 1px lightskyblue, 0px 11px 2px lightskyblue;
+    }
+
+    section, .tm-main-nav, .tm-banner {
+        box-shadow: 0px 0px 5px 1px rgba(61, 55, 61, 0.7);
+    }
+
+    .tm-banner-text {
+        animation-duration: 3s;
+        animation-name: rotation;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(45deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    .tm-team-img img {
+        width: 67%;
+    }
+
+    .tm-content-box .tm-team-description-container {
+        width: 33%;
+        float: right;
+        display: inline-block;
+        text-align: left;
+        padding-top: 20%;
+        font-style: italic;
+        text-indent: 30px;
+    }
+
+    .box-bg:hover {
+        background-color: lightskyblue;
+    }
+
+    .box-bg:hover h2 {
+        color: white;
+        font-weight: bold;
+    }
+
+    section::before {
+        content: "";
+        border: 22px solid transparent;
+        border-left: 22px solid lightskyblue;
+        border-top: 22px solid lightskyblue;
+    }
+
+    .heading h2 {
+        color: lightskyblue;
+        margin-bottom: 20px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .heading ol li {
+        list-style-type: decimal-leading-zero;
+    }
+
+    .heading ol li:nth-child(1):after,
+    .heading ol li:nth-child(3):after {
+        content: 'New';
+        color: red;
+        vertical-align: super;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .heading ol li a:hover {
+        color: red;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .heading ol li a:hover:before {
+        content: ">";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .tm-section-title {
+        text-align: center;
+    }
+
+    h2 + p {
+        font-style: italic;
+        line-height: 20px;
+        text-indent: 30px;
+    }
+
+    .box.box-work p {
+        text-indent: 0px;
+    }
+
+    .box-work {
+        padding: 5px;
+    }
+
+    .gallery-container li:nth-child(2),
+    .gallery-container li:nth-child(4),
+    .gallery-container li:nth-child(6) {
+        background-color: lightskyblue;
+        color: white;
+    }
+
+    input:focus, textarea:focus {
+        background-color: lightskyblue;
+    }
+
+    #contact h2 {
+        text-align: right;
+    }
+
+    button[type=submit] {
+        float: right;
+    }
+
+    button[type=submit]:hover {
+        background-color: lightseagreen;
+        border-color: lightseagreen;
+    }
+
+    input[type=text], input[type=email] {
+        border: none;
+        border-bottom: 1px solid lightskyblue;
+    }
+
+    #contact_subject {
+        background-image: url("../img/email-icon.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 30px;
+    }
+}
+
+@page {
+    size: auto;
+    margin: 0;
+}
+
+@media print {
+
+    .tm-sidebar, .tm-team-img, #about, .gallery-container, .img-contact-us, #contact, .carousel-indicators {
+        display: none;
+    }
+
+    body, .tm-main-content {
+        padding-top: 0px;
+    }
+
+    .tm-banner {
+        padding-bottom: 0px;
+    }
+
+    .tm-content-box, .heading .padding-medium ol, .tm-team-description-container p:last-child {
+        margin-bottom: 0px;
+    }
+
+    .padding-medium {
+        padding: 25px 40px 0px 40px;
+    }
+
+    .carousel {
+        padding-top: 25px;
+        padding-bottom: 0px;
+    }
+
+    .tm-team-description-container {
+        max-width: none;
+        text-align: center;
+    }
+
+    .heading h2 {
+        color: lightskyblue;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    li:nth-child(2), li:nth-child(4), li:nth-child(6) {
+        text-align: right;
+        margin-right: 80px;
+    }
+}
+
