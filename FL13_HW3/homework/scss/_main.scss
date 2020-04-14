@@ -1,0 +1,218 @@
+@mixin btn($color) {
+  background-color: $color;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: white;
+  border: 1px solid $color;
+}
+
+@mixin lnk {
+  color: white;
+}
+
+$themeGradient: (start: $themeGradientStart, finish: $themeGradientEnd);
+
+.logo {
+  p {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+    vertical-align: super;
+  }
+
+  span {
+    font-weight: normal;
+    display: block;
+    font-size: 10px;
+  }
+}
+
+body {
+  background-color: $bodyColor;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  color: #b1c3ce;
+
+  header {
+    background-image: $themeImag;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 0 40% 0;
+    background-size: cover;
+
+    .header-wrap {
+      padding: 25px 0px 215px 190px;
+
+      .landing-logo {
+        color: $headerLogo;
+        @extend .logo;
+      }
+
+      .header_heading {
+        color: $headerLogo;
+        font-size: 45px;
+        font-weight: bold;
+        margin-left: 0;
+        max-width: 400px;
+        font-family: 'Source Sans Pro', sans-serif;
+
+        &:after {
+          content: 'awesome';
+          background-color: $textMark;
+          position: absolute;
+          left: 190px;
+        }
+      }
+
+      .header_text {
+        white-space: pre;
+        color: $headerLogo;
+        margin-left: -45px;
+        margin-bottom: 85px;
+      }
+
+      button {
+        @include btn($buttonColor);
+        margin-right: 230px;
+      }
+
+      a {
+        @include lnk;
+      }
+    }
+  }
+
+  main {
+    position: relative;
+
+    .section_text {
+      text-align: center;
+      color: $headerLogo;
+      font-size: 40px;
+      font-weight: bold;
+      margin: 40px 0px 55px 0px;
+      font-family: 'Source Sans Pro', sans-serif;
+
+      &:after {
+        content: 'adventure';
+        background-color: $textMark;
+        position: absolute;
+        left: 712px;
+        height: 41px;
+      }
+    }
+
+    .section_card_wrap {
+      width: 1130px;
+      margin: 0 auto;
+
+      .section_card {
+        background-color: $blockColor;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        padding: 25px;
+
+        &:last-child {
+          margin-bottom: 260px;
+        }
+
+        .section_card_img {
+          border-radius: 5px;
+          height: 200px;
+        }
+
+        .section_card_right_container {
+          display: inline-block;
+          text-align: center;
+          margin-left: 20%;
+
+          .section_card_heading {
+            color: white;
+            font-weight: bold;
+          }
+
+          .section_card_text {
+            text-align: justify;
+            max-width: 410px;
+          }
+
+          a {
+            @include lnk;
+          }
+        }
+      }
+    }
+
+    .section_banner {
+      background: linear-gradient(to right, map-get($themeGradient, start), map-get($themeGradient, finish));
+      position: absolute;
+      bottom: -347px;
+      border-radius: 5px;
+      padding: 40px 0px 60px 0px;
+      margin-left: 105px;
+      width: 1200px;
+      text-align: center;
+
+      .section_banner_text_wrap {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        margin-right: 180px;
+
+        .section_banner_heading {
+          color: $headerLogo;
+          font-weight: bold;
+          font-size: 30px;
+          margin: 0px;
+
+          &:after {
+            content: 'start';
+            background-color: $textMark;
+            position: absolute;
+            left: 373px;
+            height: 37px;
+          }
+        }
+
+        .section_banner_text {
+          margin: 0px;
+        }
+      }
+
+      button {
+        @include btn($buttonColor);
+      }
+    }
+  }
+
+  footer {
+    background-color: $blockColor;
+    text-align: center;
+    padding: 170px 0px 80px 0px;
+
+    .footer_logo.landing-logo {
+      display: inline-block;
+      @extend .logo;
+    }
+
+    .footer_text {
+      display: inline-block;
+      max-width: 355px;
+      text-align: left;
+      margin: 0 270px;
+      vertical-align: top;
+    }
+
+    .footer-cr {
+      display: inline-block;
+    }
+  }
+}
