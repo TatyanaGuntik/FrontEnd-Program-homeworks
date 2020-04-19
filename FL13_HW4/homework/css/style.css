@@ -1,0 +1,185 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1.5rem;
+}
+
+body, h1, h2, p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 100vh;
+}
+
+.nav_wrap {
+    max-width: 1130px;
+    margin: 0 auto;
+    height: 10vh;
+    padding: 3vh 0vh ;
+}
+
+nav, .logo {
+    display: inline-block;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    color: #807d7b;
+    font-size: 0.9rem;
+    margin-left: 50px;
+}
+
+nav a:hover{
+    color: #eed37b;
+}
+
+.banner {
+    text-align: center;
+    background-image: url(../img/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+    color: #555555;
+    height: 90vh;
+    padding-top: 30vh;
+
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: darken;
+}
+
+.greeting {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.direction {
+    color: #b4af4b;
+    padding: 30px 0px 50px 0px;
+}
+
+.banner a {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 40px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    color: black;
+    border-radius: 40px;
+}
+
+section {
+    max-width: 945px;
+    margin: 0 auto;
+    padding: 90px 0px  60px 0px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+h2 {
+    margin: 45px 0px 15px 0px;
+}
+
+section p {
+    font-weight: lighter;
+}
+
+.author_img {
+    max-width: 45px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.author_block p {
+    display: inline-block;
+}
+.author_name {
+    padding-left: 5px;
+}
+.public_date {
+    padding-left: 25px;
+}
+
+.far.fa-comment {
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.section_text {
+    color: #9a8c89;
+    margin: 28px 0px 43px 0px;
+}
+
+section a {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    color: #807777;
+    border-radius: 40px;
+}
+
+footer {
+    background-color: #000000;
+    color: #777768;
+}
+
+.footer_wrap {
+    max-width: 945px;
+    margin: 0 auto;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    padding: 100px 0px 90px 0px;
+}
+
+.about_company_title, .contact_title {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about_company {
+    display: inline-block;
+    width: 45%;
+}
+
+.about_company p {
+    max-width: 440px;
+}
+
+.contact {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+}
+
+.contact p {
+    line-height: 2.5rem;
+}
+
+
