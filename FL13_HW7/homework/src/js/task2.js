@@ -4,11 +4,11 @@ function randomNum(min, max) {
 
 if (confirm('Do you want to play a game?') === true) {
 
-    const maxPrize = 100;
-    const middlePrize = 50;
-    const minPrize = 25;
+    const MAX_PRIZE = 100;
+    const MIDDLE_PRIZE = 50;
+    const MIN_PRIZE = 25;
 
-    let val = startGame([maxPrize, middlePrize, minPrize]);
+    let val = startGame([MAX_PRIZE, MIDDLE_PRIZE, MIN_PRIZE]);
 
     alert('Thank you for your participation. Your prize is: ' + val + ' $');
 
@@ -39,18 +39,18 @@ function startGame(piseConfig) {
 
 function playGame(piseConfig, i, prise) {
 
-    const maxRand = 5;
-    const gameCicle = 4;
+    const MAX_RAND = 5;
+    const GAME_CICLE = 4;
 
-    let ballNum = randomNum(0, maxRand * i);
+    let ballNum = randomNum(0, MAX_RAND * i);
     let countOfTry = 1;
 
-    while (countOfTry < gameCicle) {
+    while (countOfTry < GAME_CICLE) {
         let userAnswer = prompt(
-            'Choose a roulette pocket number from 0 to ' + maxRand * i +
-            '\nAttempts left: ' + (gameCicle - countOfTry) +
+            'Choose a roulette pocket number from 0 to ' + MAX_RAND * i +
+            '\nAttempts left: ' + (GAME_CICLE - countOfTry) +
             '\nTotal prize: ' + prise +
-            '\nPossible prize on current attempt: ' + piseConfig[countOfTry - 1]
+            '\nPossible prize on current attempt: ' + piseConfig[countOfTry - 1] * i
         );
 
         if (Number(userAnswer) === ballNum) {
