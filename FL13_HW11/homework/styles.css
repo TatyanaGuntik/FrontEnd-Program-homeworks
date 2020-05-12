@@ -1,0 +1,82 @@
+#root div span {
+    position: relative;
+    display: inline-block;
+}
+
+.folder, .file {
+    margin-left: 20px;
+}
+
+span {
+    width: 95%;
+}
+span:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.folder:before,
+.folder.visible:before,
+.file:before {
+    font-family: 'Material Icons';
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 1.5rem;
+}
+
+.folder:before{
+    content: "folder";
+    color: orange;
+}
+
+.folder.visible:before {
+    content: "folder_open";
+    color: orange;
+}
+
+.file:before {
+    content: "description";
+    color: gray;
+}
+
+#root > div > .folder > div:not([class]) div.folder,
+#root > div > .folder > div:not([class]) div.file,
+#root > div > .folder > div:not([class]) div.mrgn-l-30,
+#root > div > .folder > div:not([class]) div.folder>div {
+    display: none;
+}
+
+.folder.visible > div:not([class]) > div{
+    display: block !important;
+}
+
+.folder.visible > div{
+    display: block !important;
+}
+
+.folder.invisible > div{
+    display: none !important;
+}
+
+.contextmenu {
+    position: absolute;
+    top:0;
+    left: 30px;
+    background: lightgray;
+    margin: 0 !important;
+    z-index: 10;
+    border: 1px solid black;
+}
+.contextmenu div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.contextmenu div:hover {
+   background: darkgray;
+}
+
+.mrgn-l-30 {
+    margin-left: 30px;
+}
+
