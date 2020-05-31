@@ -1,0 +1,27 @@
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Tania",
+  "username": "Tania_zhopa"
+}
+
+###
+
+PUT http://localhost:3000/users/7b2715
+Content-Type: application/json
+
+{
+  "name": "666jjj)))))",
+  "username": "666uname",
+  "phone": "8888888"
+}
+
+###
+
+DELETE http://localhost:3000/users/7b2715
+Authorization: admin
